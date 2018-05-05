@@ -107,43 +107,45 @@
       </article>
 
       <div class="further-info">
+
         <!-- insert images with srcsets and sizes -->
+  
+<picture>
         <a href="https://www.mozilla.org/en-US/firefox/new/">
           <img srcset="download.svg">
         </a>
+</picture>
 
-
+<picture>
         <a href="https://www.mozilla.org/">
-          <img srcset="firefox_logo_120.png 120w,
-                      400w,"
-
-                sizes="(max-width:480px) 120px,
-                      (min-width:481px) 400px,"
-
-               src="firefox_logo_400.png" alt="Firefox Logo">
+         <source media="(max-width: 480px)" img srcset="firefox_logo_120.png">
+            <source media="(max-width: 800px)" img srcset="firefox_logo_400.png">
+              <img src="firefox_logo_400.png" alt="Firefox Logo">
         </a>
+</picture>
 
+<!--
+<img src="firefox_logo_400.png" sizes="480px"
+
+-->
+
+<picture>
         <a href="https://addons.mozilla.org/">
 
-        <img srcset="firefox_addons_120.png 120w,
-                      firefox_addons_400.png 400w,"
-
-                sizes="(max-width:480px) 120px,
-                      (min-width:481px) 400px,"
-
-               src="firefox_addons_400.png" alt="Firefox addons">
+        <source media="(max-width: 480px)" img srcset="firefox_addons_120.png">
+            <source media="(max-width: 800px)" img srcset="firefox_addons_400.png">
+              <img src="firefox_addons_400.png" alt="Addons">
         </a>
+</picture>
 
+<picture>
 
         <a href="https://developer.mozilla.org/en-US/">
-          <img>
-          <img srcset="dinosaur_120.png 120w,
-                        dinosaur_400.png 400w,"
-
-                sizes="(max-width:480px) 120vw,
-                      (min-width:481px) 400vw,"
-                src="dinosaur_400" alt="Dinosaur head">
+          <source media="(max-width: 480px)" img srcset="dinosaur_120.png">
+            <source media="(min-width: 481px)" img srcset="dinosaur_400.png">
+              <img src="dinosaur_400.png" alt="Dinosaur Head">
         </a>
+</picture>
 
 
         <div class="clearfix"></div>
@@ -152,7 +154,7 @@
       <div class="red-panda">
         <picture>
           <source media="(max-width: 480px)" img srcset="panda600.png">
-            <source media="(max-width: 800px)" img srcset="panda1200.png">
+            <source media="(min-width: 481px)" img srcset="panda1200.png">
               <img src="panda1200.png" alt="A cute panda">
             </picture>
 
